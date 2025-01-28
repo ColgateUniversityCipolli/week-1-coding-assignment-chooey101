@@ -105,7 +105,7 @@ canvas_collatz(colors = colorPalette("tuscany3"))
 \textbf{Solution:}
 <<CollatzPlot3, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
 canvas_collatz(
-  colors,
+  colors = colorPalette("tuscany3"),
   background = "#dbdbdb",
   n = 72,
   angle.even = 0.0145,
