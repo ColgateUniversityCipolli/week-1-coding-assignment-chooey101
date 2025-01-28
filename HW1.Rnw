@@ -53,7 +53,8 @@ library(aRtsy)
  \texttt{canvas\_collatz()}. Make sure to update the caption.\\
 \textbf{Solution:}
 <<CollatzPlot1, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
-# help("aRtsy")
+set.seed(1)
+canvas_collatz(colors = colorPalette("tuscany3"))
 @
 %Code to insert a figure [H]ere
 \begin{figure}[H]
@@ -61,7 +62,7 @@ library(aRtsy)
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot1>>
 @
-\caption{A caption...}
+\caption{First photo created with collatz algorithm}
 \label{CollatzPlot1}
 \end{center}
 \end{figure}
@@ -73,6 +74,8 @@ library(aRtsy)
   update the caption.\\
 \textbf{Solution:}
 <<CollatzPlot2, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
+set.seed(1313)
+canvas_collatz(colors = colorPalette("tuscany3"))
 @
 %Code to insert a figure [H]ere
 \begin{figure}[H]
@@ -80,7 +83,7 @@ library(aRtsy)
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot2>>
 @
-\caption{A caption...}
+\caption{2nd photo made using the collatz algorithm}
 \label{CollatzPlot2}
 \end{center}
 \end{figure}
@@ -101,6 +104,14 @@ library(aRtsy)
   \end{itemize}
 \textbf{Solution:}
 <<CollatzPlot3, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
+canvas_collatz(
+  colors,
+  background = "#dbdbdb",
+  n = 72,
+  angle.even = 0.0145,
+  angle.odd = -0.05,
+  side = FALSE
+)
 @
 %Code to insert a figure [H]ere
 \begin{figure}[H]
@@ -108,7 +119,7 @@ library(aRtsy)
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot3>>
 @
-\caption{A caption...}
+\caption{Third image created using collatz algorithm}
 \label{CollatzPlot3}
 \end{center}
 \end{figure}
@@ -126,7 +137,7 @@ library(aRtsy)
   package and use \verb|\citep{}| to add a parenthetical citation to the end of
   the sentence below.
 \textbf{Solution:} We created the generative art in Question 1 using the \texttt{aRtsy}
-package for \texttt{R}.
+package for \texttt{R} \citep{artsy}.
 \end{enumerate}
 
 \newpage
@@ -165,5 +176,4 @@ package for \texttt{R}.
 \textbf{Solution:}
 \end{enumerate}
 \end{enumerate}
-
 \end{document}
